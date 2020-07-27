@@ -1,5 +1,7 @@
 # TargetFB
 
+Pakistan.txt Directory Is for Pakistani FB Accounts
+
 pkg update
 
 pkg upgrade
