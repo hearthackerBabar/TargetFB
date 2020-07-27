@@ -27,7 +27,7 @@ print """
 time.sleep(0.5)
 user = raw_input('[+] Target Username/ID/Email : ')
 time.sleep(0.8)
-wrdlstFileName = raw_input('\n[+] Wordlist Directory(.txt) : ')
+wrdlstFileName = raw_input('\n[+] Enter Wordlist Directory : ')
 try:
     wordlist = open(wrdlstFileName, 'r')
 except FileNotFoundError:
