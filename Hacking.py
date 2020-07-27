@@ -14,21 +14,6 @@ try:
 except ModuleNotFoundError:
     print '[!] Module >Mechanize< Not Found!\n    This module is only available in python 2.x :/\n    Please install mechanize (pip install mechanize) and run the program with python2'
     exit()
-time.sleep(0.5)
-user = raw_input('[+] Target Username/ID/Email : ')
-time.sleep(0.8)
-wrdlstFileName = raw_input('\n[+] Wordlist Directory(.txt) : ')
-try:
-    wordlist = open(wrdlstFileName, 'r')
-except FileNotFoundError:
-    print ('\n[!] File Not Found!')
-    exit()
-
-time.sleep(0.8)
-print '\n\nCracking '+user+' Now...'
-
-time.sleep(1)
-print '\033[1;47m\033[1;31m                       Cracking Has Been Started\033[1;0m   '
 os.system("clear")
 print """
 \033[1;31m██╗░░██╗░█████╗░░█████╗░██╗░░██╗
@@ -43,7 +28,22 @@ print """
 \033[1;31m░╚████╔╝░██╔══██╗██║░░██║░░░╚═╝██║░░
 \033[1;31m░░╚██╔╝░░██║░░██║╚█████╔╝██╗███████╗
 \033[1;31m░░░╚═╝░░░╚═╝░░╚═╝░╚════╝░╚═╝╚══════╝
-"""
+"""    
+time.sleep(0.5)
+user = raw_input('[+] Target Username/ID/Email : ')
+time.sleep(0.8)
+wrdlstFileName = raw_input('\n[+] Wordlist Directory(.txt) : ')
+try:
+    wordlist = open(wrdlstFileName, 'r')
+except FileNotFoundError:
+    print ('\n[!] File Not Found!')
+    exit()
+
+time.sleep(0.8)
+print '\n\nCracking '+user+' Now...'
+
+time.sleep(1)
+print '\033[1;47m\033[1;31m                       Cracking Has Been Started               \033[1;0m   '
 for password in wordlist:
     if password == '' or password == ' ':
         pass
