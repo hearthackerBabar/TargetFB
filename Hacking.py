@@ -68,7 +68,7 @@ for password in wordlist:
                 os.system('rm Facebook-Log.txt || del Facebook-Log.txt')
                 exit()
             else:
-                print "\033[1;97m[+] \033[1;32mPassword Match : "+str(password)
+                print "\033[1;97m[+] \033[1;31mPassword Match : "+str(password)
         except KeyboardInterrupt:
             print '\n#############################################\n   Exiting..'
             dos.close()
