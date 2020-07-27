@@ -23,7 +23,7 @@ print """
 \033[1;31m██╔══██║██╔══██║██║░░██╗██╔═██╗░██║██║╚████║
 \033[1;31m██║░░██║██║░░██║╚█████╔╝██║░╚██╗██║██║░╚███║
 \033[1;31m╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝╚═╝╚═╝░░╚══╝
-\033[1;47m\033[1;35m          Enter Facebook Account Link Below                \033[1;0m
+\033[1;47m\033[1;35m          Enter Facebook Account Link Below                       \033[1;0m
 """    
 time.sleep(0.5)
 user = raw_input('[+] Target Username/ID/Email : ')
@@ -39,7 +39,7 @@ time.sleep(0.8)
 print '\n\nCracking '+user+' Now...'
 
 time.sleep(1)
-print '\033[1;47m\033[1;31m                 Cracking Has Been Started     \033[1;0m   '
+print '\033[1;47m\033[1;31m               Cracking Has Been Started     \033[1;0m   '
 for password in wordlist:
     if password == '' or password == ' ':
         pass
