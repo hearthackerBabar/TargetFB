@@ -22,4 +22,6 @@ cd TargetFB
 
 python2 Hacking.py
 
+Worldlist Directory : Pakistan.txt
+
 My Whatsapp Number: +923000223253
