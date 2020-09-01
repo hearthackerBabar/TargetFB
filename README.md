@@ -2,7 +2,8 @@
 
 Pakistan.txt Directory Is for Pakistani FB Accounts
 
-Worldlist.txt Directory is for All Countries :)
+Worldlist.txt Directory is for All Countries
+
 pkg update
 
 pkg upgrade
