@@ -80,4 +80,5 @@ print 'Sorry, none of the passswords in your wordlist is right.'
 time.sleep(0.8)
 dos.close()
 os.system('rm Facebook-Log.txt || del Facebook-Log.txt')
+
 exit()
